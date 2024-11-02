@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Date Morning with Vishakha ❤️</title>
+    <link rel="stylesheet" href="foggy_styles.css">
+</head>
+<body>
+    <div class="scene">
+        <div class="foggy-background">
+            <h1>A Cozy Winter Morning with Chai and Vishakha ❤️</h1>
+            <p>Imagine this, Vishakha: a foggy morning, a warm cup of chai, and us together.</p>
+
+            <!-- Couple Doodle -->
+            <div class="couple-doodle">
+                <!-- Replace this with an actual SVG or image path of a couple doodle -->
+                <img src="couple.webp" alt="Couple Doodle">
+            </div>
+
+            <!-- Chai Cup with Steam -->
+
+            <p class="final-message">Here's to cozy mornings and chai moments with you, Vishakha ❤️</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Floating Hearts and Snowflakes -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const scene = document.querySelector(".scene");
+
+        // Create floating hearts
+        for (let i = 0; i < 5; i++) {
+            let heart = document.createElement("div");
+            heart.classList.add("heart");
+            scene.appendChild(heart);
+        }
+
+        // Create snowfall effect
+        for (let i = 0; i < 10; i++) {
+            let snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            scene.appendChild(snowflake);
+        }
+
+        // Randomize heart and snowflake positions and animations
+        document.querySelectorAll('.heart').forEach(heart => {
+            heart.style.left = `${Math.random() * 100}%`;
+            heart.style.animationDuration = `${Math.random() * 2 + 5}s`;
+        });
+        document.querySelectorAll('.snowflake').forEach(snowflake => {
+            snowflake.style.left = `${Math.random() * 100}%`;
+            snowflake.style.animationDuration = `${Math.random() * 4 + 6}s`;
+            snowflake.style.animationDelay = `${Math.random() * 3}s`;
+        });
+    });
+    </script>
+</body>
+</html>

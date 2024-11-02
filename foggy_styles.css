@@ -1,0 +1,121 @@
+/* Base styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #d1e0ff, #f9d7d6);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    overflow: hidden;
+}
+
+.scene {
+    text-align: center;
+    position: relative;
+}
+
+.foggy-background h1 {
+    font-size: 2.5em;
+    color: #5d5656;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.foggy-background p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Couple Doodle Styling */
+.couple-doodle img {
+    width: 150px;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Chai Cup and Steam */
+.chai-cup {
+    width: 70px;
+    height: 90px;
+    background-color: #7a5241;
+    border-radius: 10px;
+    margin: 20px auto;
+    position: relative;
+    animation: pulse 3s infinite;
+}
+
+.steam {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    top: -40px;
+    left: 20px;
+    opacity: 0;
+    animation: steam-rise 3s infinite ease-in-out;
+}
+
+.steam:nth-child(2) { left: 35px; animation-delay: 0.5s; }
+.steam:nth-child(3) { left: 50px; animation-delay: 1s; }
+
+@keyframes steam-rise {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-50px); opacity: 0; }
+}
+
+/* Romantic Floating Hearts Animation */
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    transform: rotate(45deg);
+    border-radius: 50% 50% 0 0;
+    box-shadow: -10px 10px 0 0 pink;
+    animation: floatHearts 5s infinite ease-in-out;
+    opacity: 0.6;
+}
+
+.heart:nth-child(2) { left: 60%; animation-duration: 6s; }
+.heart:nth-child(3) { left: 80%; animation-duration: 8s; }
+.heart:nth-child(4) { left: 30%; animation-duration: 7s; }
+.heart:nth-child(5) { left: 20%; animation-duration: 5.5s; }
+
+@keyframes floatHearts {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Snowflake Animation */
+.snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snowfall 10s linear infinite;
+}
+
+@keyframes snowfall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Final message styling */
+.final-message {
+    font-size: 1.2em;
+    color: #7a5241;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out 2s;
+}
